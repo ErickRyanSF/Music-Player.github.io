@@ -1,0 +1,47 @@
+.img3 {
+    width: 100px;
+}
+  
+.img{
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    width: 400px;
+}
+
+.img2 {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+
+body {
+    background-color: rgb(85, 9, 35);
+    }
+
+
+
+    #Nomedaplay {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+    }
+
+    .button {
+        background-color: #ffffff;
+        width: 80px;
+        height: 80px;
+        border-radius: 70%;
+        position:relative;
+        bottom: 40px;
+        left: calc(50% - 30px);
+      }
+
+      .dadosdm {
+        color: white;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+      }
+
+     
