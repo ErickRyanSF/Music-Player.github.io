@@ -1,5 +1,7 @@
+
+
 .img3 {
-    width: 100px;
+    align-items: center;
 }
   
 .img{
@@ -15,33 +17,93 @@
     align-items: center;
 }
 
-body {
+.img4{
+    margin-bottom: 100px;
+}
+
+* {
     background-color: rgb(85, 9, 35);
+    color: #ffffff;
     }
 
+.player{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.botao-play{
+font-size: 70px;
+}
 
+.setas{
+font-size: 70px;
+}
+
+.botao-pause{
+    font-size: 70px;
+    display: none;
+
+}
     #Nomedaplay {
         text-align: center;
         color: white;
         font-size: 50px;
+        margin: 50px;
     }
 
-    .button {
-        background-color: #ffffff;
-        width: 80px;
-        height: 80px;
-        border-radius: 70%;
-        position:relative;
-        bottom: 40px;
-        left: calc(50% - 30px);
-      }
-
       .dadosdm {
-        color: white;
-        display: flex;
-        align-items: center;
-        font-size: 30px;
-      }
+       color: white;
+   
+        display: inline-block;
+            
+           
+        margin-left: 10px;
+        }
 
-     
+
+
+        .bordadebaixo {
+  
+ 
+            border-top: 2px solid #ff093e;
+              
+            background-color: #ff093e;
+             
+            padding-top: 10px;
+              
+            
+            text-align: center;
+
+              position: fixed;
+
+              
+             
+            bottom: 0;
+              
+             
+            width: 100%;
+              
+             
+           
+            }
+            
+            .bordadebaixo {
+              display: flex;
+              
+            
+            justify-content: center;
+              
+            
+            align-items: center;
+            }
+            
+            .bordadebaixo img {
+              
+             
+            margin: 0 10px;
+
+        
+            }
+    
