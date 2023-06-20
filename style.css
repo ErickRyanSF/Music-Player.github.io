@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(85, 9, 35);
+    color: #ffffff;
+    }
+
+.img3 {
+    align-items: center;
+}
+  
+.img{
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    width: 400px;
+}
+
+.img2 {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.img4{
+    margin-bottom: 100px;
+}
+
+
+.player{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-play, .botao-pause{
+font-size: 70px;
+cursor: pointer;
+}
+
+.setas{
+font-size: 70px;
+cursor: pointer;
+}
+
+.botao-pause{
+    display: none;
+}
+
+    #Nomedaplay {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        margin: 50px;
+    }
+
+      .dadosdm {
+       color: white;
+   
+        display: inline-block;
+            
+           
+        margin-left: 10px;
+        }
+
+
+
+        .bordadebaixo {
+  
+ 
+            border-top: 2px solid #ff093e;
+              
+            background-color: #ff093e;
+             
+            padding-top: 10px;
+              
+            
+            text-align: center;
+
+              position: fixed;
+
+              
+             
+            bottom: 0;
+              
+             
+            width: 100%; 
+            }
+            
+            .bordadebaixo {
+              display: flex;
+              
+            
+            justify-content: center;
+              
+            
+            align-items: center;
+            }
+            
+            .bordadebaixo img {
+              
+             
+            margin: 0 10px;
+            }
+    
