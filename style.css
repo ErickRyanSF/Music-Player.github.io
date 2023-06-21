@@ -23,7 +23,7 @@ body {
 .img4{
     margin-bottom: 100px;
 }
-
+ 
 
 .player{
     width: 300px;
@@ -46,11 +46,26 @@ cursor: pointer;
     display: none;
 }
 
-    #Nomedaplay {
+#Nomedaplay {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin: 50px;
+}
+
+    #Nomemusica {
         text-align: center;
         color: white;
         font-size: 50px;
         margin: 50px;
+    }
+
+    #Nomeartista{
+      text-align: center;
+      color: white;
+      font-style: italic;
+      font-size: 40px;
+      margin-bottom: 70px;
     }
 
       .dadosdm {
@@ -102,3 +117,4 @@ cursor: pointer;
             margin: 0 10px;
             }
     
+           
