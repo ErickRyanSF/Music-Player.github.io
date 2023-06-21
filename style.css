@@ -24,6 +24,44 @@ body {
     margin-bottom: 100px;
 }
  
+.duracao {
+    width: 300px;
+}
+
+.tempo{
+   display: flex;
+   width: 500px;
+   justify-content: space-between;
+   text-align: center;
+   margin-left: 225px;
+   font-size: 20px;
+   margin-bottom: 30px;
+}
+
+.barra{
+    align-items: center;
+    display: flex;
+    width: 500px;
+    height: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-left: 225px;
+    justify-content: flex-start;
+}
+
+progress{
+    height: 15px;
+    width: 0%;
+    background-color: #ffffff;
+}
+
+.ponto{
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-left: -2px;
+}
 
 .player{
     width: 300px;
