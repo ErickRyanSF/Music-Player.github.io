@@ -1,8 +1,8 @@
 let musicas = [
     {titulo:'Talking to the Moon', artista:'Bruno Mars', src:'sons/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3', img:'Imagens/ttm.jpg'},
-    {titulo:'Flor e o Beija-Flor', artista:'Henrique e Juliano', src:'sons/Henrique e Juliano - Flor E O Beija-Flor part. Marília Mendonça - DVD Novas Histórias(MP3_160K).mp3', img:'Imagens/beija-flor.jpg'},
+    {titulo:'Flor e o Beija-Flor', artista:'Henrique e Juliano', src:'sons/Beija-flor.mp3', img:'Imagens/beija-flor.jpg'},
     {titulo:'When I Was Your Man', artista:'Bruno Mars', src:'sons/Bruno_Mars_-_When_I_Was_Your_Man_Naijamusics.com.mp3', img:'Imagens/Bruno_Mars_-_When_I_Was_Your_Man.jpg'},
-    {titulo:'Evidências', artista:'Chitãozinho e Xororó', src:'sons/wagnerluther-chitaozinho-e-xororo-evidencias-por-wagner-luther-a279265a.mp3', img:'Imagens/evidencias.jpg'},
+    {titulo:'Evidências', artista:'Chitãozinho e Xororó', src:'sons/Evidencias.mp3', img:'Imagens/evidencias.jpg'},
     {titulo:'What Makes You Beautiful', artista:'One Direction', src:'sons/What_Makes_You_Beautiful.mp3', img:'Imagens/what make you b.jpg'},
     {titulo:'Bohemian Rhapsody', artista:'Queen', src:'sons/Queen - Bohemian Rhapsody.mp3', img:'Imagens/queen-ii.jpg'},
     {titulo:'Sunflower', artista:'Post Malone', src:'sons/Post-Malone-Sunflower-Spider-Man-Into-the-Spider-Verse-Ft-Swae-Lee-(HiphopMood.com).mp3', img:'Imagens/sunflower.jpg'},
@@ -66,7 +66,6 @@ function atualizarBarra(){
     barra.style.width = Math.floor((musica.currentTime/musica.duration) * 100) + "%";
     let tempoDecorrido = document.querySelector('.inicio');
     tempoDecorrido.textContent = segundosParaMinutos(Math.floor(musica.currentTime));
-
 }
 
 function segundosParaMinutos (segundos){
