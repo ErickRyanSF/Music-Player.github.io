@@ -24,6 +24,15 @@ body {
     margin-bottom: 100px;
 }
  
+
+.container{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-right: 215px;
+       
+}
+
 .duracao {
     width: 300px;
 }
@@ -32,8 +41,6 @@ body {
    display: flex;
    width: 500px;
    justify-content: space-between;
-   text-align: center;
-   margin-left: 225px;
    font-size: 20px;
    margin-bottom: 30px;
 }
@@ -45,8 +52,6 @@ body {
     height: 15px;
     border: 1px solid #eee;
     border-radius: 10px;
-    margin-left: 225px;
-    justify-content: flex-start;
 }
 
 progress{
@@ -68,6 +73,7 @@ progress{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .botao-play, .botao-pause{
@@ -112,7 +118,7 @@ cursor: pointer;
         display: inline-block;
             
            
-        margin-left: 10px;
+        margin-left: 15px;
         }
 
 
