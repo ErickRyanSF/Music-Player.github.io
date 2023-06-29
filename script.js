@@ -9,36 +9,7 @@ let musicas = [
     {titulo:'Plutão', artista:'VMZ', src:'sons/VMZ - Plutão.mp3', img:'Imagens/plutao.jpg'},
     {titulo:'Calling', artista:'Metro Boomin', src:'sons/Metro_Boomin_Nav_A_Boogie_Wit_da_Hoodie_Swae_Lee_-_Calling.mp3', img:'Imagens/calling.jpg'},
     {titulo:'Pray For Me', artista:'The Weeknd', src:'sons/14-The-Weeknd-Kendrick-Lamar-Pray-For-Me-2.mp3', img:'Imagens/pray for me.jpg'},
-    {titulo:'A Thousand Years', artista:'James Arthur', src:'sons/A Thousand Years(MP3_160K).mp3', img:'Imagens/james years.jpg'},
-    {titulo:'Rolling in The Deep', artista:'Adele', src:'sons/Rolling in the Deep(MP3_160K).mp3', img:'Imagens/adele.jpg'},
-    {titulo:'Adore You', artista:'Harry Styles', src:'sons/Adore You(MP3_160K).mp3', img:'Imagens/adore you.jpg'},
-    {titulo:'Amante Profissional', artista:'Herva Doce', src:'sons/Amante Profissional(MP3_160K).mp3', img:'Imagens/amante.jpg'},
-    {titulo:'Idontwannabeyouanymore', artista:'Billie Eilish', src:'sons/idontwannabeyouanymore(MP3_160K).mp3', img:'Imagens/billie.jpg'},
-    {titulo:'Heaven', artista:'Bryan Adans', src:'sons/Heaven (Classic Version)(MP3_160K).mp3', img:'Imagens/Bryan_Adams_-_Heaven.jpg'},
-    {titulo:'Boy with Luv', artista:'BTS', src:'sons/BTS (방탄소년단) - 작은 것들을 위한 시 (Boy With Luv) feat. Halsey (Official Audio)(MP3_160K).mp3', img:'Imagens/BTS-Boy-With-Luv-feat.Halsey-.jpg'},
-    {titulo:'Dynamite', artista:'BTS', src:'sons/BTS (방탄소년단) - DYNAMITE (Official Audio)(MP3_160K).mp3', img:'Imagens/BTS-Dynamite.jpg'},
-    {titulo:'7 Years', artista:'Lukas Graham', src:'sons/7 Years(MP3_160K).mp3', img:'Imagens/Capa_de_7_Years.jpg'},
-    {titulo:'Eduardo e Mônica', artista:'Legião Urbana', src:'sons/Eduardo E Mônica(MP3_160K).mp3', img:'Imagens/edu e monica.jpg'},
-    {titulo:'Total Eclipse of The Heart', artista:'Glee Version', src:'sons/Total Eclipse Of The Heart (Glee Cast Version)(MP3_160K).mp3', img:'Imagens/total-eclipse-of-the-heart-04.jpg'},
-    {titulo:'Whiskey a Go-Go', artista:'Roupa Nova', src:'sons/gogogo.mp3', img:'Imagens/gogogo.jpg'},
-    {titulo:'João e Maria', artista:'Chico Buarque', src:'sons/João E Maria(MP3_160K).mp3', img:'Imagens/joao e maria.jpg'},
-    {titulo:'Mulher de Fases', artista:'Raimundos', src:'sons/Mulher de fases(MP3_160K).mp3', img:'Imagens/mulher de fases.jpg'},
-    {titulo:'Naked', artista:'James Arthur', src:'sons/Naked(MP3_160K).mp3', img:'Imagens/naked.jpg'},
-    {titulo:'Onde Anda Você', artista:'Thiago Nacarato', src:'sons/Onde Anda Você(MP3_160K).mp3', img:'Imagens/onde anda.jpg'},
-    {titulo:'Pais e Filhos', artista:'Legião Urbana', src:'sons/Pais E Filhos(MP3_160K).mp3', img:'Imagens/pais.jpg'},
-    {titulo:'Birds', artista:'Imagine Dragons', src:'sons/Birds(MP3_160K).mp3', img:'Imagens/passarinho.jpg'},
-    {titulo:'Menina Estranha', artista:'Restart', src:'sons/Menina Estranha(MP3_160K).mp3', img:'Imagens/pelanza.jpg'},
-    {titulo:'Pense em Mim', artista:'Leandro e Leonardo', src:'sons/Pense em mim(MP3_160K).mp3', img:'Imagens/pense.jpg'},
-    {titulo:'Rewrite the Stars', artista:'Anne-Marie & James Arthur', src:'sons/Rewrite The Stars(MP3_160K).mp3', img:'Imagens/rew.jpg'},
-    {titulo:'Sign of The Times', artista:'Harry Styles', src:'sons/Sign of the Times(MP3_160K).mp3', img:'Imagens/sign of the times.jpg'},
-    {titulo:'Sutilmente', artista:'Skank', src:'sons/Sutilmente(MP3_160K).mp3', img:'Imagens/sutilmente.jpg'},
-    {titulo:'Tempo Perdido', artista:'Legião Urbana', src:'sons/Tempo Perdido(MP3_160K).mp3', img:'Imagens/tempo.jpg'},
-    {titulo:'How to Save a Life', artista:'The Fray', src:'sons/How to Save a Life(MP3_160K).mp3', img:'Imagens/The_Fray_-_How_to_Save_a_Life.jpg'},
-    {titulo:'Dusk Till Down', artista:'Zayn & Sia', src:'sons/Dusk Till Dawn (Radio Edit)(MP3_160K).mp3', img:'Imagens/zayn.jpg'}
-
 ];
-
-
 
 let musica = document.querySelector('audio');
 let indexMusica = 0;
@@ -65,6 +36,12 @@ document.querySelector('.botao-play').addEventListener('click', tocarMusica);
 
 document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
 document.querySelector('.botao-pause').style.display = 'none';
+
+document.querySelector('.replay').addEventListener('click', replayMusica);
+
+document.querySelector('.random').addEventListener('click', tocarMusicaAleatoria);
+
+
 musica.addEventListener("timeupdate", atualizarBarra);
 
 document.querySelector('.anterior').addEventListener('click', () => {
@@ -103,6 +80,18 @@ function pausarMusica(){
     document.querySelector('.botao-pause').style.display = 'none';
     document.querySelector('.botao-play').style.display = 'block';
 }
+
+function replayMusica() {
+    musica.currentTime = 0; 
+    tocarMusica(); 
+}
+
+function tocarMusicaAleatoria() {
+    indexMusica = Math.floor(Math.random() * musicas.length); // Seleciona um índice aleatório da lista de músicas
+    renderizarMusica(indexMusica); // Renderiza a música correspondente
+    tocarMusica(); // Inicia a reprodução da música
+}
+
 
 function atualizarBarra(){
     let barra = document.querySelector('progress');
